@@ -190,8 +190,8 @@ const ticTacToe = (() => {
         player2.setName(player2Name);
         const player1NameElement = document.querySelector('.player.one>div');
         const player2NameElement = document.querySelector('.player.two>div');
-        player1NameElement.textContent = player1.getName();
-        player2NameElement.textContent = player2.getName();
+        player1NameElement.textContent = `(${player1.getSymbol()}) ${player1.getName()}`;
+        player2NameElement.textContent = `(${player2.getSymbol()}) ${player2.getName()}`;
         const cells = document.querySelectorAll('.cell');
         const restartButton = document.querySelector('#reset');
         const nextRoundButton = document.querySelector('#next-round');
