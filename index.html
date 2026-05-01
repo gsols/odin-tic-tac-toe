@@ -8,21 +8,59 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 class="title">Tik Tac Toe</h1>
-    <button class="toggle">START GAME</button>
-    <button class="remove">UNDO</button>
-    <div class="text-container"></div>
-    <div id="game">
-        <div class="cell" data-index="0"></div>
-        <div class="cell" data-index="1"></div>
-        <div class="cell" data-index="2"></div>
-        <div class="cell" data-index="3"></div>
-        <div class="cell" data-index="4"></div>
-        <div class="cell" data-index="5"></div>
-        <div class="cell" data-index="6"></div>
-        <div class="cell" data-index="7"></div>
-        <div class="cell" data-index="8"></div>
-    </div>
-    <button id="reset">Reset</button>
+    <main>
+        <h1 class="title">Tik Tac Toe</h1>
+        
+        <div class="round-result"></div>
+        <div class="status">
+            <div class="player one active">
+                <div>Player 1</div>
+                <div class="player-one-score">0</div>
+            </div>
+            <div class="player two">
+                <div>Player 2</div>
+                <div class="player-two-score">0</div>
+            </div>
+            <div class="draw">
+                <div>Draw</div>
+                <div class="draw-count">0</div>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+    
+        <div class="action-buttons">
+            <button id="reset">Restart Game</button>
+            <button id="next-round" class="">Next Round</button>
+
+        </div>
+
+    </main>
+    <dialog>
+        <div class="dialog-wrapper">
+            <h1 class="title">Tik Tac Toe</h1>
+            <div class="inputs">
+                <div class="dialog-header">Let's Play!</div>
+                <div class="player1-field">
+                    <label for="player1-name">X </label>
+                    <input type="text" id="player1-name" placeholder="Player 1">
+                </div>
+                <div class="player2-field">
+                    <label for="player2-name">O</label>
+                    <input type="text" id="player2-name" placeholder="Player 2">
+                </div>
+            </div>
+            <button class="start-button">Start!</button>
+        </div>
+    </dialog>
 </body>
 </html>

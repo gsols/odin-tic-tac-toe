@@ -1,3 +1,192 @@
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:  black; 
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.status {
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.player, .draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    /* border: white solid 1px; */
+    border-top: none;
+    padding: 16px 0;
+    margin: 16px 0;
+}
+
+
+.game-container {
+    margin:auto;
+    display: grid;
+    width: 500px;
+    height: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: black;
+}
+
+.round-result {
+    width: 100%;
+    margin-top: 16px;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 4px;
+    min-height: 16px;
+}
+
+.cell {
+    border: .1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* .cell:nth-child(3n) {
+  border-right: none;
+}
+
+.cell:nth-child(n) {
+  border-left: none;
+}
+
+.cell:nth-child(n + 7) {
+  border-bottom: none;
+}
+
+.cell:nth-child(n) {
+  border-top: none;
+} */
+
+
+
+button{
+    margin-top: 4px;
+    padding: 8px 16px;
+    border: none;
+    border: 1px solid white;
+    color: white;
+    flex: 1;
+    background-color: transparent;
+} 
+
+.action-buttons {
+    width: 500px;
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.white-border{
+    border: 1px solid white;
+}
+
+.active {
+    background-color: white;
+    color: black;
+}
+
+.player div {
+    background-color: transparent;
+}
+
+.draw div {
+    background-color: transparent;
+}
+
+
+.dialog-wrapper{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    width: 600px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-wrapper input{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    width: 400px;
+    margin-top: 16px;
+    font-size: 1em;
+    margin-left: 16px;
+    margin-bottom: 25px;
+}
+
+.dialog-wrapper .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    flex: 1;
+}
+.dialog-wrapper .title{
+    background-color: transparent;
+    text-align: center;
+    padding: 8px 16px;
+    width: 300px;
+    margin-top: 45px;
+}
+
+.dialog-wrapper .dialog-header{
+    margin-bottom: 45px;
+}
+
+.start-button{  
+    margin-top: 16px;
+    padding: 8px 24px;
+    max-height: fit-content;
+    width: 80%;
+    border: none;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    justify-self: flex-end;
+    font-size: 2em;
+    margin-bottom: 60px;
+}
+
